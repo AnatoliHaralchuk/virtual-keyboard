@@ -223,7 +223,7 @@ function getKeyboard(){
     </div>
 </div>
 <p class="text">Клавиатура создана в ОС Windows</p>
-<p class="text">Для переключения языка: левые ctrl + Shift</p>
+<p class="text">Для переключения языка: левые ctrl(держать) + Shift</p>
     `;
 }
 getKeyboard()
@@ -259,7 +259,6 @@ function getLocalStorag(){
 }
 function keydown() {
     let key
-    console.log(event);
     keys.forEach(e => {
         if (e.dataset.text === event.code) key = e
     })
@@ -302,11 +301,9 @@ function checkKey(code){
     } else if (code === 'CapsLock'){
         if (!caps) {
             caps = true
-            console.log('upper',caps);
             r.forEach(e => e.textContent = e.textContent.toUpperCase())}
         else {
             caps = false
-            console.log('lower',caps);
             r.forEach(e => e.textContent = e.textContent.toLowerCase())}
     } else if (code === 'Space'){textarea.value += ' '
     } else if (code === 'Tab'){textarea.value += '    '
