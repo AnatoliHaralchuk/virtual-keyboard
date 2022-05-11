@@ -1,0 +1,26 @@
+{
+  "name": "virtual-keyboard",
+  "version": "1.0.0",
+  "description": "virtual-keyboard",
+  "main": "index.js",
+  "dependencies": {
+    "eslint": "^8.15.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnatoliHaralchuk/virtual-keyboard.git"
+  },
+  "keywords": [
+    "key"
+  ],
+  "author": "haralchuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnatoliHaralchuk/virtual-keyboard/issues"
+  },
+  "homepage": "https://github.com/AnatoliHaralchuk/virtual-keyboard#readme"
+}
