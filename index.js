@@ -232,6 +232,7 @@ getKeyboard()
 
 const keys = document.querySelectorAll('.row1_item')
 getLocalStorag()
+
 const row = document.querySelectorAll('.row')
 const textarea = document.querySelector('.textarea')
 const r = document.querySelectorAll('.r')
@@ -273,15 +274,21 @@ function keyup() {
     })
     key.classList.remove('item_active')
     if ((key.dataset.text === 'ShiftLeft')&&(event.ctrlKey === true)) {
+        console.log(event);
         (lang === 'en')? lang = 'ru' : lang = 'en'
         getTranslate()}
+        if (key.dataset.text === 'CapsLock'){if (!caps) {
+            caps = true
+            r.forEach(e => e.textContent = e.textContent.toUpperCase())}
+        else {
+            caps = false
+            r.forEach(e => e.textContent = e.textContent.toLowerCase())}}
 }
 function mousedown(){
     textarea.focus()
 if (event.target.classList.contains('row1_item')) {
     event.target.classList.add('item_active')
     let code = event.target.dataset.text
-    console.log(event.target);
     checkKey(code)
     r.forEach(e => {
         if (e === event.target) textarea.value += e.textContent
@@ -296,9 +303,11 @@ function mouseup(){
     }
 
 let caps = false
-    
 function checkKey(code){
-    if (code === 'Backspace') {textarea.value = textarea.value.slice(0,textarea.value.length-1)
+    if (code === 'Backspace') {
+        let a = textarea.value.slice(textarea.selectionEnd).length;
+        textarea.value = textarea.value.slice(0,textarea.selectionEnd - 1) + textarea.value.slice(textarea.selectionEnd)
+        textarea.selectionEnd = textarea.value.length - a
     } else if (code === 'CapsLock'){
         if (!caps) {
             caps = true
@@ -310,13 +319,14 @@ function checkKey(code){
     } else if (code === 'Tab'){textarea.value += '    '
     } else if (code === 'Enter'){textarea.value += '\n'
     } else if (code === 'Delete'){
-        textarea.value += textarea.value.slice(0,textarea.value.slice(0,textarea.selectionEnd)) + textarea.value.slice(textarea.value.slice(0,textarea.selectionEnd)+1,textarea.value.length)
+        let a = textarea.value.slice(textarea.selectionEnd+1).length;
+        textarea.value = textarea.value.slice(0,textarea.selectionEnd) + textarea.value.slice(textarea.selectionEnd+1)
+        textarea.selectionEnd = textarea.value.length - a
     } else if (code === 'ArrowLeft'){textarea.selectionEnd -= 1;  
     } else if (code === 'ArrowRight'){textarea.selectionStart += 1;  
     } else if (code === 'ArrowDown'){
-        console.log('end',textarea.selectionEnd);
-        console.log('start',textarea.selectionStart);
-        textarea.selectionEnd = `\n` + textarea.selectionEnd;  
+        let o =  " "
+        textarea.value += o.repeat(textarea.length) 
     }      
 }
 function getTranslate(){
