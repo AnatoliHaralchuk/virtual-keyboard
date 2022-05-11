@@ -206,7 +206,7 @@ function getKeyboard(){
             <div class="r row1_item" data-text = 'Comma'>,</div>
             <div class="r row1_item" data-text = 'Period'>.</div>
             <div class="r row1_item" data-text = 'Slash'>/</div>
-            <div class="r row1_item" data-text = 'ArrowUp'>up</div>
+            <div class="row1_item" data-text = 'ArrowUp'>up</div>
             <div class="row1_item" data-text = 'ShiftRight'>Shift</div>
         </div>
         <div class="row row5">
@@ -215,9 +215,9 @@ function getKeyboard(){
             <div class="row1_item" data-text = 'AltLeft'>Alt</div>
             <div class="row1_item" data-text = 'Space'>Space</div>
             <div class="row1_item" data-text = 'AltRight'>Alt</div>
-            <div class="r row1_item" data-text = 'ArrowLeft'>left</div>
-            <div class="r row1_item" data-text = 'ArrowDown'>down</div>
-            <div class="r row1_item" data-text = 'ArrowRight'>rigft</div>
+            <div class="row1_item" data-text = 'ArrowLeft'>left</div>
+            <div class="row1_item" data-text = 'ArrowDown'>down</div>
+            <div class="row1_item" data-text = 'ArrowRight'>rigft</div>
             <div class="row1_item" data-text = 'ControlRight'>Ctrl</div>
         </div>
     </div>
@@ -281,6 +281,7 @@ function mousedown(){
 if (event.target.classList.contains('row1_item')) {
     event.target.classList.add('item_active')
     let code = event.target.dataset.text
+    console.log(event.target);
     checkKey(code)
     r.forEach(e => {
         if (e === event.target) textarea.value += e.textContent
@@ -308,7 +309,15 @@ function checkKey(code){
     } else if (code === 'Space'){textarea.value += ' '
     } else if (code === 'Tab'){textarea.value += '    '
     } else if (code === 'Enter'){textarea.value += '\n'
-}   
+    } else if (code === 'Delete'){
+        textarea.value += textarea.value.slice(0,textarea.value.slice(0,textarea.selectionEnd)) + textarea.value.slice(textarea.value.slice(0,textarea.selectionEnd)+1,textarea.value.length)
+    } else if (code === 'ArrowLeft'){textarea.selectionEnd -= 1;  
+    } else if (code === 'ArrowRight'){textarea.selectionStart += 1;  
+    } else if (code === 'ArrowDown'){
+        console.log('end',textarea.selectionEnd);
+        console.log('start',textarea.selectionStart);
+        textarea.selectionEnd = `\n` + textarea.selectionEnd;  
+    }      
 }
 function getTranslate(){
     keys.forEach(e => e.textContent = `${obj[lang][e.dataset.text]}`)
