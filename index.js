@@ -1,148 +1,147 @@
 const obj = {
-'en':{
-    'Backquote':'\`',
-    'Digit1':'1',
-    'Digit2':'2',
-    'Digit3':'3',
-    'Digit4':'4',
-    'Digit5':'5',
-    'Digit6':'6',
-    'Digit7':'7',
-    'Digit8':'8',
-    'Digit9':'9',
-    'Digit0':'0',
-    'Minus':'-',
-    'Equal':'=',
-    'Backspace':'Backspace',
-    'Tab':'Tab',
-    'KeyQ':'q',
-    'KeyW':'w',
-    'KeyE':'e',
-    'KeyR':'r',
-    'KeyT':'t',
-    'KeyY':'y',
-    'KeyU':'u',
-    'KeyI':'i',
-    'KeyO':'o',
-    'KeyP':'p',
-    'BracketLeft':'[',
-    'BracketRight':']',
-    'Backslash':'\\',
-    'Delete':'del',
-    'CapsLock':'CapsLock',
-    'KeyA':'a',
-    'KeyS':'s',
-    'KeyD':'d',
-    'KeyF':'f',
-    'KeyG':'g',
-    'KeyH':'h',
-    'KeyJ':'j',
-    'KeyK':'k',
-    'KeyL':'l',
-    'Semicolon':';',
-    'Quote':'\'',
-    'Enter':'Enter',
-    'ShiftLeft':'Shift',
-    'KeyZ':'z',
-    'KeyX':'x',
-    'KeyC':'c',
-    'KeyV':'v',
-    'KeyB':'b',
-    'KeyN':'n',
-    'KeyM':'m',
-    'Comma':',',
-    'Period':'.',
-    'Slash':'/',
-    'ArrowUp':'Up',
-    'ShiftRight':'Shift',
-    'ControlLeft':'Ctrl',
-    'Meta':'Win',
-    'AltLeft':'Alt',
-    'Space':'Space',
-    'AltRight':'Alt',
-    'ArrowLeft':'left',
-    'ArrowDown':'down',
-    'ArrowRight':'right',
-    'ControlRight':'Ctrl',
-},
-'ru':{
-    'Backquote':'ё',
-    'Digit1':'1',
-    'Digit2':'2',
-    'Digit3':'3',
-    'Digit4':'4',
-    'Digit5':'5',
-    'Digit6':'6',
-    'Digit7':'7',
-    'Digit8':'8',
-    'Digit9':'9',
-    'Digit0':'0',
-    'Minus':'-',
-    'Equal':'=',
-    'Backspace':'Backspace',
-    'Tab':'Tab',
-    'KeyQ':'й',
-    'KeyW':'ц',
-    'KeyE':'у',
-    'KeyR':'к',
-    'KeyT':'е',
-    'KeyY':'н',
-    'KeyU':'г',
-    'KeyI':'ш',
-    'KeyO':'щ',
-    'KeyP':'з',
-    'BracketLeft':'х',
-    'BracketRight':'ъ',
-    'Backslash':'\\',
-    'Delete':'del',
-    'CapsLock':'CapsLock',
-    'KeyA':'ф',
-    'KeyS':'ы',
-    'KeyD':'в',
-    'KeyF':'а',
-    'KeyG':'п',
-    'KeyH':'р',
-    'KeyJ':'о',
-    'KeyK':'л',
-    'KeyL':'д',
-    'Semicolon':'ж',
-    'Quote':'э',
-    'Enter':'Enter',
-    'ShiftLeft':'Shift',
-    'KeyZ':'я',
-    'KeyX':'ч',
-    'KeyC':'с',
-    'KeyV':'м',
-    'KeyB':'и',
-    'KeyN':'т',
-    'KeyM':'ь',
-    'Comma':'б',
-    'Period':'ю',
-    'Slash':'.',
-    'ArrowUp':'Up',
-    'ShiftRight':'Shift',
-    'ControlLeft':'Ctrl',
-    'Meta':'Win',
-    'AltLeft':'Alt',
-    'Space':'Space',
-    'AltRight':'Alt',
-    'ArrowLeft':'left',
-    'ArrowDown':'down',
-    'ArrowRight':'right',
-    'ControlRight':'Ctrl',
-}
-}
-let lang = 'en'
+  en: {
+    Backquote: '`',
+    Digit1: '1',
+    Digit2: '2',
+    Digit3: '3',
+    Digit4: '4',
+    Digit5: '5',
+    Digit6: '6',
+    Digit7: '7',
+    Digit8: '8',
+    Digit9: '9',
+    Digit0: '0',
+    Minus: '-',
+    Equal: '=',
+    Backspace: 'Backspace',
+    Tab: 'Tab',
+    KeyQ: 'q',
+    KeyW: 'w',
+    KeyE: 'e',
+    KeyR: 'r',
+    KeyT: 't',
+    KeyY: 'y',
+    KeyU: 'u',
+    KeyI: 'i',
+    KeyO: 'o',
+    KeyP: 'p',
+    BracketLeft: '[',
+    BracketRight: ']',
+    Backslash: '\\',
+    Delete: 'del',
+    CapsLock: 'CapsLock',
+    KeyA: 'a',
+    KeyS: 's',
+    KeyD: 'd',
+    KeyF: 'f',
+    KeyG: 'g',
+    KeyH: 'h',
+    KeyJ: 'j',
+    KeyK: 'k',
+    KeyL: 'l',
+    Semicolon: ';',
+    Quote: '\'',
+    Enter: 'Enter',
+    ShiftLeft: 'Shift',
+    KeyZ: 'z',
+    KeyX: 'x',
+    KeyC: 'c',
+    KeyV: 'v',
+    KeyB: 'b',
+    KeyN: 'n',
+    KeyM: 'm',
+    Comma: ',',
+    Period: '.',
+    Slash: '/',
+    ArrowUp: 'Up',
+    ShiftRight: 'Shift',
+    ControlLeft: 'Ctrl',
+    Meta: 'Win',
+    AltLeft: 'Alt',
+    Space: 'Space',
+    AltRight: 'Alt',
+    ArrowLeft: 'left',
+    ArrowDown: 'down',
+    ArrowRight: 'right',
+    ControlRight: 'Ctrl',
+  },
+  ru: {
+    Backquote: 'ё',
+    Digit1: '1',
+    Digit2: '2',
+    Digit3: '3',
+    Digit4: '4',
+    Digit5: '5',
+    Digit6: '6',
+    Digit7: '7',
+    Digit8: '8',
+    Digit9: '9',
+    Digit0: '0',
+    Minus: '-',
+    Equal: '=',
+    Backspace: 'Backspace',
+    Tab: 'Tab',
+    KeyQ: 'й',
+    KeyW: 'ц',
+    KeyE: 'у',
+    KeyR: 'к',
+    KeyT: 'е',
+    KeyY: 'н',
+    KeyU: 'г',
+    KeyI: 'ш',
+    KeyO: 'щ',
+    KeyP: 'з',
+    BracketLeft: 'х',
+    BracketRight: 'ъ',
+    Backslash: '\\',
+    Delete: 'del',
+    CapsLock: 'CapsLock',
+    KeyA: 'ф',
+    KeyS: 'ы',
+    KeyD: 'в',
+    KeyF: 'а',
+    KeyG: 'п',
+    KeyH: 'р',
+    KeyJ: 'о',
+    KeyK: 'л',
+    KeyL: 'д',
+    Semicolon: 'ж',
+    Quote: 'э',
+    Enter: 'Enter',
+    ShiftLeft: 'Shift',
+    KeyZ: 'я',
+    KeyX: 'ч',
+    KeyC: 'с',
+    KeyV: 'м',
+    KeyB: 'и',
+    KeyN: 'т',
+    KeyM: 'ь',
+    Comma: 'б',
+    Period: 'ю',
+    Slash: '.',
+    ArrowUp: 'Up',
+    ShiftRight: 'Shift',
+    ControlLeft: 'Ctrl',
+    Meta: 'Win',
+    AltLeft: 'Alt',
+    Space: 'Space',
+    AltRight: 'Alt',
+    ArrowLeft: 'left',
+    ArrowDown: 'down',
+    ArrowRight: 'right',
+    ControlRight: 'Ctrl',
+  },
+};
+let lang = 'en';
 
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 
+function getKeyboard() {
+  const container = document.createElement('div');
+  container.classList.add('container');
+  body.appendChild(container);
 
-function getKeyboard(){
-    const container = document.createElement('div')
-    container.classList.add('container')
-    body.appendChild(container)
-    
-    container.innerHTML = `
+  container.innerHTML = `
     <h1>RS Virtual-Keyboard</h1>
     <textarea autofocus spellcheck = 'false' class = "textarea" name="text" id="#" cols="30" rows="15"></textarea>
     <div class="boardArea">
@@ -226,110 +225,113 @@ function getKeyboard(){
 <p class="text">Для переключения языка: левые ctrl(держать) + Shift</p>
     `;
 }
-getKeyboard()
+getKeyboard();
 
+const keys = document.querySelectorAll('.row1_item');
+getLocalStorag();
 
+const row = document.querySelectorAll('.row');
+const textarea = document.querySelector('.textarea');
+const r = document.querySelectorAll('.r');
 
-const keys = document.querySelectorAll('.row1_item')
-getLocalStorag()
+row.forEach((e) => e.addEventListener('mousedown', () => mousedown()));
+row.forEach((e) => e.addEventListener('mouseup', () => mouseup()));
+row.forEach((e) => e.addEventListener('mouseout', () => mouseup()));
+row.forEach((e) => e.addEventListener('mouseover', () => focuc()));
 
-const row = document.querySelectorAll('.row')
-const textarea = document.querySelector('.textarea')
-const r = document.querySelectorAll('.r')
+textarea.addEventListener('keydown', () => keydown());
+textarea.addEventListener('keyup', () => keyup());
+window.addEventListener('beforeunload', setLocalStorag);
 
-row.forEach(e => e.addEventListener('mousedown', (event) => mousedown()))
-row.forEach(e => e.addEventListener('mouseup', (event) => mouseup()))
-row.forEach(e => e.addEventListener('mouseout', (event) => mouseup()))
-row.forEach(e => e.addEventListener('mouseover', (event) =>focuc()))
-
-textarea.addEventListener('keydown',(event) => keydown())
-textarea.addEventListener('keyup',(event) => keyup())
-window.addEventListener('beforeunload', setLocalStorag)
-
-function focuc(){
-    textarea.focus()
+function focuc() {
+  textarea.focus();
 }
-function setLocalStorag(){
-    localStorage.setItem('lang', lang)
+function setLocalStorag() {
+  localStorage.setItem('lang', lang);
 }
-function getLocalStorag(){
-   if (localStorage.getItem('lang')){
-       lang = localStorage.getItem('lang')
-       getTranslate()
-   }
+function getLocalStorag() {
+  if (localStorage.getItem('lang')) {
+    lang = localStorage.getItem('lang');
+    getTranslate();
+  }
 }
 function keydown() {
-    let key
-    keys.forEach(e => {
-        if (e.dataset.text === event.code) key = e
-    })
-    key.classList.add('item_active')
-    
+  let key;
+  keys.forEach((e) => {
+    if (e.dataset.text === event.code) key = e;
+  });
+  key.classList.add('item_active');
 }
 
 function keyup() {
-    let key
-    keys.forEach(e => {
-        if (e.dataset.text === event.code) key = e
-    })
-    key.classList.remove('item_active')
-    if ((key.dataset.text === 'ShiftLeft')&&(event.ctrlKey === true)) {
-        console.log(event);
-        (lang === 'en')? lang = 'ru' : lang = 'en'
-        getTranslate()}
-        if (key.dataset.text === 'CapsLock'){if (!caps) {
-            caps = true
-            r.forEach(e => e.textContent = e.textContent.toUpperCase())}
-        else {
-            caps = false
-            r.forEach(e => e.textContent = e.textContent.toLowerCase())}}
-}
-function mousedown(){
-    textarea.focus()
-if (event.target.classList.contains('row1_item')) {
-    event.target.classList.add('item_active')
-    let code = event.target.dataset.text
-    checkKey(code)
-    r.forEach(e => {
-        if (e === event.target) textarea.value += e.textContent
-    })
-    
-}
-
-}
-function mouseup(){
-    textarea.focus()
-    if (event.target.classList.contains('row1_item')) event.target.classList.remove('item_active')
+  let key;
+  keys.forEach((e) => {
+    if (e.dataset.text === event.code) key = e;
+  });
+  key.classList.remove('item_active');
+  if ((key.dataset.text === 'ShiftLeft') && (event.ctrlKey === true)) {
+    (lang === 'en') ? lang = 'ru' : lang = 'en';
+    getTranslate();
+  }
+  if (key.dataset.text === 'CapsLock') {
+    if (!caps) {
+      caps = true;
+      r.forEach((e) => e.textContent = e.textContent.toUpperCase());
+    } else {
+      caps = false;
+      r.forEach((e) => e.textContent = e.textContent.toLowerCase());
     }
-
-let caps = false
-function checkKey(code){
-    if (code === 'Backspace') {
-        let a = textarea.value.slice(textarea.selectionEnd).length;
-        textarea.value = textarea.value.slice(0,textarea.selectionEnd - 1) + textarea.value.slice(textarea.selectionEnd)
-        textarea.selectionEnd = textarea.value.length - a
-    } else if (code === 'CapsLock'){
-        if (!caps) {
-            caps = true
-            r.forEach(e => e.textContent = e.textContent.toUpperCase())}
-        else {
-            caps = false
-            r.forEach(e => e.textContent = e.textContent.toLowerCase())}
-    } else if (code === 'Space'){textarea.value += ' '
-    } else if (code === 'Tab'){textarea.value += '    '
-    } else if (code === 'Enter'){textarea.value += '\n'
-    } else if (code === 'Delete'){
-        let a = textarea.value.slice(textarea.selectionEnd+1).length;
-        textarea.value = textarea.value.slice(0,textarea.selectionEnd) + textarea.value.slice(textarea.selectionEnd+1)
-        textarea.selectionEnd = textarea.value.length - a
-    } else if (code === 'ArrowLeft'){textarea.selectionEnd -= 1;  
-    } else if (code === 'ArrowRight'){textarea.selectionStart += 1;  
-    } else if (code === 'ArrowDown'){
-        let o =  " "
-        textarea.value += o.repeat(textarea.length) 
-    }      
+  }
 }
-function getTranslate(){
-    keys.forEach(e => e.textContent = `${obj[lang][e.dataset.text]}`)
+function mousedown() {
+  textarea.focus();
+  if (event.target.classList.contains('row1_item')) {
+    event.target.classList.add('item_active');
+    const code = event.target.dataset.text;
+    checkKey(code);
+    r.forEach((e) => {
+      if (e === event.target) textarea.value += e.textContent;
+    });
+  }
+}
+function mouseup() {
+  textarea.focus();
+  if (event.target.classList.contains('row1_item')) event.target.classList.remove('item_active');
 }
 
+let caps = false;
+function checkKey(code) {
+  if (code === 'Backspace') {
+    const a = textarea.value.slice(textarea.selectionEnd).length;
+    textarea.value = textarea.value.slice(0, textarea.selectionEnd - 1) + textarea.value.slice(textarea.selectionEnd);
+    textarea.selectionEnd = textarea.value.length - a;
+  } else if (code === 'CapsLock') {
+    if (!caps) {
+      caps = true;
+      r.forEach((e) => e.textContent = e.textContent.toUpperCase());
+    } else {
+      caps = false;
+      r.forEach((e) => e.textContent = e.textContent.toLowerCase());
+    }
+  } else if (code === 'Space') {
+    textarea.value += ' ';
+  } else if (code === 'Tab') {
+    textarea.value += '    ';
+  } else if (code === 'Enter') {
+    textarea.value += '\n';
+  } else if (code === 'Delete') {
+    const a = textarea.value.slice(textarea.selectionEnd + 1).length;
+    textarea.value = textarea.value.slice(0, textarea.selectionEnd) + textarea.value.slice(textarea.selectionEnd + 1);
+    textarea.selectionEnd = textarea.value.length - a;
+  } else if (code === 'ArrowLeft') {
+    textarea.selectionEnd -= 1;
+  } else if (code === 'ArrowRight') {
+    textarea.selectionStart += 1;
+  } else if (code === 'ArrowDown') {
+    const o = ' ';
+    textarea.value += o.repeat(textarea.length);
+  }
+}
+function getTranslate() {
+  keys.forEach((e) => e.textContent = `${obj[lang][e.dataset.text]}`);
+}
