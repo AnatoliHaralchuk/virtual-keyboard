@@ -232,7 +232,7 @@ const keys = document.querySelectorAll('.row1_item');
 let caps = false;
 
 function getTranslate() {
-  keys.forEach((e) => { e.textContent = `${obj[lang][e.dataset.text]}`});
+  keys.forEach((e) => { e.textContent = `${obj[lang][e.dataset.text]}`; });
 }
 
 function getLocalStorag() {
@@ -282,7 +282,7 @@ function checkKey(code) {
   }
 }
 
-function mousedown() {
+function mousedown(event) {
   textarea.focus();
   if (event.target.classList.contains('row1_item')) {
     event.target.classList.add('item_active');
@@ -294,7 +294,7 @@ function mousedown() {
   }
 }
 
-function mouseup() {
+function mouseup(event) {
   textarea.focus();
   if (event.target.classList.contains('row1_item')) event.target.classList.remove('item_active');
 }
@@ -303,7 +303,7 @@ function focuc() {
   textarea.focus();
 }
 
-function keydown() {
+function keydown(event) {
   let key;
   keys.forEach((e) => {
     if (e.dataset.text === event.code) key = e;
@@ -311,7 +311,7 @@ function keydown() {
   key.classList.add('item_active');
 }
 
-function keyup() {
+function keyup(event) {
   let key;
   keys.forEach((e) => {
     if (e.dataset.text === event.code) key = e;
@@ -332,13 +332,13 @@ function keyup() {
   }
 }
 
-row.forEach((e) => e.addEventListener('mousedown', () => mousedown()));
-row.forEach((e) => e.addEventListener('mouseup', () => mouseup()));
-row.forEach((e) => e.addEventListener('mouseout', () => mouseup()));
-row.forEach((e) => e.addEventListener('mouseover', () => focuc()));
+row.forEach((e) => e.addEventListener('mousedown', (event) => mousedown(event)));
+row.forEach((e) => e.addEventListener('mouseup', (event) => mouseup(event)));
+row.forEach((e) => e.addEventListener('mouseout', (event) => mouseup(event)));
+row.forEach((e) => e.addEventListener('mouseover', (event) => focuc(event)));
 
-textarea.addEventListener('keydown', () => keydown());
-textarea.addEventListener('keyup', () => keyup());
+textarea.addEventListener('keydown', (event) => keydown(event));
+textarea.addEventListener('keyup', (event) => keyup(event));
 
 function setLocalStorag() {
   localStorage.setItem('lang', lang);
