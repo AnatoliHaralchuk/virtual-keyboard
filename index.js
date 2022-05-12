@@ -132,6 +132,7 @@ const obj = {
     ControlRight: 'Ctrl',
   },
 };
+
 let lang = 'en';
 
 const body = document.querySelector('body');
@@ -231,7 +232,7 @@ const keys = document.querySelectorAll('.row1_item');
 let caps = false;
 
 function getTranslate() {
-  keys.forEach((e) => { e.textContent = `${obj[lang][e.dataset.text]}`; });
+  keys.forEach((e) => { e.textContent = `${obj[lang][e.dataset.text]}`});
 }
 
 function getLocalStorag() {
@@ -281,7 +282,7 @@ function checkKey(code) {
   }
 }
 
-function mousedown(event) {
+function mousedown() {
   textarea.focus();
   if (event.target.classList.contains('row1_item')) {
     event.target.classList.add('item_active');
@@ -293,7 +294,7 @@ function mousedown(event) {
   }
 }
 
-function mouseup(event) {
+function mouseup() {
   textarea.focus();
   if (event.target.classList.contains('row1_item')) event.target.classList.remove('item_active');
 }
@@ -302,7 +303,7 @@ function focuc() {
   textarea.focus();
 }
 
-function keydown(event) {
+function keydown() {
   let key;
   keys.forEach((e) => {
     if (e.dataset.text === event.code) key = e;
@@ -310,7 +311,7 @@ function keydown(event) {
   key.classList.add('item_active');
 }
 
-function keyup(event) {
+function keyup() {
   let key;
   keys.forEach((e) => {
     if (e.dataset.text === event.code) key = e;
